@@ -10,6 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText moneda;
@@ -31,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                DecimalFormat formateador = new DecimalFormat("#.##");
                 String strMoneda = moneda.getText().toString();
                 if (strMoneda.matches("")){
-                    Toast toast1 = Toast.makeText(getApplicationContext(), "No ha ingresado un valor", Toast.LENGTH_SHORT);
+                    Toast toast1 = Toast.makeText(getApplicationContext(), "No ha ingresado un valor", Toast.LENGTH_LONG);
                     toast1.show();
                 }
                 else {
@@ -42,18 +45,22 @@ public class MainActivity extends AppCompatActivity {
                         Double dolar1 = Double.parseDouble(textomoneda);
 
                         Double eur = dolar1*0.9;
-                        String eurF = String.valueOf(eur);
+                        String eurF = formateador.format(eur);
+                        //String eurF = String.valueOf(eur);
+                        //eurF = formateador.format(eurF);
 
-                        cambio.setText(eurF);
+                        cambio.setText(textomoneda+" US$ = "+eurF+" €.");
                     }
                     else{
                         String textomoneda = moneda.getText().toString();
                         Double dolar1 = Double.parseDouble(textomoneda);
 
                         Double eur = dolar1*1.11;
-                        String eurF = String.valueOf(eur);
+                        String eurF = formateador.format(eur);
+                        //String eurF = String.valueOf(eur);
+                        //eurF = formateador.format(eurF);
 
-                        cambio.setText(eurF);
+                        cambio.setText(textomoneda+" € = "+eurF+" US$.");
                     }
                 }
 
