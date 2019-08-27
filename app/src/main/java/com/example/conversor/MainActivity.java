@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
                         Double eur = dolar1*0.9;
                         String eurF = formateador.format(eur);
-                        //String eurF = String.valueOf(eur);
-                        //eurF = formateador.format(eurF);
 
                         cambio.setText(textomoneda+" US$ = "+eurF+" €.");
                     }
@@ -57,8 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                         Double eur = dolar1*1.11;
                         String eurF = formateador.format(eur);
-                        //String eurF = String.valueOf(eur);
-                        //eurF = formateador.format(eurF);
 
                         cambio.setText(textomoneda+" € = "+eurF+" US$.");
                     }
