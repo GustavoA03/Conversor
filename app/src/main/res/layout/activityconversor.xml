@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/cartel"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="660dp"
+        android:text="Conversor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Conversor" />
+
+    <EditText
+
+        android:id="@+id/texto"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="584dp"
+        android:inputType="numberDecimal"
+        android:hint="Ingrese valor" />
+
+    <RadioGroup
+        android:id="@+id/selec"
+        android:layout_width="159dp"
+        android:layout_height="89dp"
+        android:layout_alignTop="@+id/cartel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="452dp"
+        android:checkedButton="@id/DolarEuro">
+
+        <RadioButton
+            android:id="@+id/DolarEuro"
+            android:layout_width="131dp"
+            android:layout_height="42dp"
+            android:buttonTint="#4CAF50"
+            android:text="Dolar a Euro" />
+
+        <RadioButton
+            android:id="@+id/EuroDolar"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#4CAF50"
+            android:text="Euro a Dolar" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="317dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="382dp"
+        android:backgroundTint="#B6F8DB"
+        android:text="Convertir" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="403dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="291dp"
+        android:maxLength="5"
+        android:textSize="24sp" />
+
+</RelativeLayout>
